@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>my channel</title>
+        <link href="../styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <!-- the id="top" is used for the anchor at the bottom-->
+        <link rel="stylesheet" href="../design.css">
+        <center>
+        <a href="../index.html" class="btn" id="top">Home</a>
+        <a href="aboutme.html"class="btn">About me</a>
+        <a href="#"class="btn">Resume</a>
+        <a href="contacts.html" class="btn">contacts</a>
+        
+        <h4>My Resume</h4>
+        
+        <a href="#edu"class="btl">Education</a>
+        <a href="#exp"class="btl">Experience</a>
+        <a href="#ski"class="btl">Skills</a>
+        <br>
+        <br><br>
+        <img class="img-Roberto" src="../images/Roberto.jpg" height="500" alt="Roberto Ukandu portrait">
+    </center>
+        <h4>Roberto Ukandu</h4>
+       
+        <p class="justify">
+            Software-Developer capable of continuous lerning from senior developers while still nurturing junior developers. Passionate about lerning and development with a desire to apply skills on a larger development team. Eager to tackle more complex problems problems and continue to find ways to maximalize user efficiency.
+        </p>
+
+        <ol>
+            <!--be sure to update this list with my actual data-->
+
+            <li id="edu" class="resumeListHeading">
+                Education
+                <ul>
+                    <li>SGD Deutschlands Führende Fernschule, Software-Developer</li>                    
+                </ul>
+            </li>
+            <img class="img-education" src="../Images/Education.png">
+            <br>
+            <li id="exp"class="resumeListHeading">
+                Experience
+                <ul>
+                    <li>I´ve built this Web-site myself</li>
+                    <li>I´ve built different Projects with Java and Javascript like:</li>
+                    <li>-a calculator</li>
+                    <li>- a Lager material listing Programm for saving, changing and canceling the materials writting</li>
+                    <li>- an images search engine</li>
+                    <li>- an e-Mails programm for writing, sending and receiving Messeges</li>
+                    <li>..etc</li>
+                </ul>
+            </li>
+            <img class="img-software" src="../Images/software.png">
+            <p>&nbsp;</p>
+            <li id="ski"class="resumeListHeading">
+                Skills
+                <ul>
+                    <li>Deutsch Sprache C1</li>
+                    <li>Englisch Muttersprache</li>
+                    <li>Italienisch Muttersprache</li>
+                    <li>Database design and development</li>
+                    <li>Entity-relationship diagramming</li>
+                    <li>Structured query language (SOL)</li>
+                    <li>Tableau</li>
+                    <li>Excel Solver,PivotTables, and Charts</li>
+                    <li>Java, HTML, CSS, javascript,Node.js, Vue.js, React.js, Angular</li>
+                    <li>Flowchart diagramming</li>                    
+                </ul>
+            </li>
+        </ol>
+        <p>&nbsp;</p>
+        <h2>Let´s play a game. How many Moons does the Earth have?</h2>
+        <label for="answerInput">Enter your answer in numbers please:</label>
+        <input type="number" id="answerInput">
+        <button onclick="checkAnswer()">Check Answer</button>
+        <p id="result"></p>
+        <script>
+            function checkAnswer() {
+                const answerInput = document.getElementById('answerInput').value;
+                const answer = parseInt(answerInput);
+        
+                const resultElement = document.getElementById('result');
+        
+                if (isNaN(answer)) {
+                    resultElement.textContent = "Please enter a valid answer.";
+                } else if (answer < 1) {
+                    resultElement.textContent = "Your answer is incorrect. What did you even learn in school? " + answer;
+                } else if (answer > 1) {
+                    resultElement.textContent = "Your answer is incorrect. Look at the night sky and see for yourself " + answer;
+                } else if (answer === 1) {
+                    resultElement.textContent = "Your answer is correct, well done!!";
+                } else {
+                    resultElement.textContent = "Your answer is not valid, please try again " + answer;
+                }
+            }
+        </script>
+   
+        
+        
+        
+        
+        
+        
+        <a href="#top"class="btl">Back to the top</a>
+        <p>&nbsp;</p>
+    </body>
+</html>
